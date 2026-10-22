@@ -10,14 +10,14 @@ Study Group Crew is a Streamlit study assistant powered by a sequential CrewAI w
 
 ## Setup
 
-1. Create and activate a virtual environment:
+1. Create and activate a virtual environment with Python 3.12 (or another supported version):
 
 	```bash
-	python -m venv .venv
+	python3.12 -m venv .venv
 	source .venv/bin/activate
 	```
 
-	On Windows, activate it with `.venv\Scripts\activate`.
+	On Ubuntu, if venv creation reports that `ensurepip` is unavailable, install the matching `python3.12-venv` system package first. On Windows, use `py -3.12 -m venv .venv` and activate it with `.venv\Scripts\activate`.
 
 2. Install dependencies:
 
@@ -29,7 +29,7 @@ Study Group Crew is a Streamlit study assistant powered by a sequential CrewAI w
 
 	```env
 	GOOGLE_API_KEY=your_google_api_key
-	GEMINI_MODEL=gemini/gemini-2.5-flash
+	GEMINI_MODEL=gemini/gemini-3.8-flash
 	```
 
 	`.env` is ignored by Git. Never commit API keys. The model identifier is configurable; use a Gemini model currently supported by your Google API account.
@@ -37,7 +37,7 @@ Study Group Crew is a Streamlit study assistant powered by a sequential CrewAI w
 4. Run the app:
 
 	```bash
-	streamlit run app.py
+	python -m streamlit run app.py
 	```
 
 ## Workflow

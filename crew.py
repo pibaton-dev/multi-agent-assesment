@@ -51,7 +51,7 @@ def generate_study_guide(
         raise ValueError("GOOGLE_API_KEY is missing. Add it to your local .env file.")
 
     llm = LLM(
-        model=os.getenv("GEMINI_MODEL", "gemini/gemini-2.5-flash"),
+        model=os.getenv("GEMINI_MODEL", "gemini/gemini-3.8-flash"),
         api_key=api_key,
         temperature=0.2,
     )
