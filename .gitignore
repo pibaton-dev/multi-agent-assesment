@@ -1,0 +1,15 @@
+# Environment secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Local generated output
+study_guide.txt

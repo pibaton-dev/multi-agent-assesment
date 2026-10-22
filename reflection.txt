@@ -1,0 +1,22 @@
+Study Group Crew Reflection
+===========================
+
+What worked well
+----------------
+The sequential workflow gives each specialist a focused responsibility. Explicit task context passes the research into the explanation, the explanation into the quiz, and all three earlier outputs into the fact checker. The final output combines the intermediate materials with the review, so students can inspect how the guide was built. DuckDuckGo and Wikipedia provide two complementary research paths.
+
+Challenges
+----------
+Agent outputs are not deterministic, and a later agent can inherit mistakes from earlier work. Tool and model APIs also evolve, while search results vary by topic and availability. The configured Gemini model may not be enabled for every Google account or remain available indefinitely.
+
+Limitations
+-----------
+The fact checker is another language-model agent, not an independent guarantee of truth. Web search can return incomplete, low-quality, or outdated material. The current app handles one topic per run, has no user accounts or persistent history, and writes its saved output to a local file. It does not provide instructor review, formal citations verification, or tailored reading levels.
+
+Future improvements
+-------------------
+Add source-quality scoring and citation links, configurable grade level and quiz length, a retry strategy for temporary provider failures, structured output validation, and automated tests with mocked LLM/tool responses. A production deployment should add authentication, rate limiting, observability, secure secret management, and durable per-user storage. Model selection should be configurable and checked against currently available Google models.
+
+Lessons from multi-agent systems
+-------------------------------
+Specialized agents can make a complex workflow easier to understand, but adding agents does not automatically improve correctness. Clear task boundaries, explicit context, constrained output formats, and a final review step matter. Each additional agent also adds latency, cost, and another opportunity for errors to propagate, so the workflow should be tested as a whole and its uncertainty communicated to users.
